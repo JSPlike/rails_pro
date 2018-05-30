@@ -1,20 +1,34 @@
 <div id="container">    
-    <nav>
+    <div class="nav-1">
         <div class="nav-inner">
-            <h1>Handling Code</h1>
+            <h1>HANCO</h1>
+            <ul>
+                <li class="nav-inner-menu"><%=link_to '첫 화면'%></li>
+                <li class="nav-inner-menu"><%=link_to '소 개'%></li>
+                <li class="nav-inner-menu"><%=link_to '문 의'%></li>
+                <li class="nav-inner-menu"><%=link_to '게시판'%></li>
+
+                <li class="nav-inner-btn"><%=link_to do %><button class="btn btn-default">Log In</button><%end%></li>
+                <li class="nav-inner-btn"><%=link_to do %><button class="btn btn-primary">Sign UP</button><%end%></li>
+            </ul>
         </div>
+    </div>
+    <!--
+    <div class="nav-2">
         <div class="nav-inner-2">
             <ul>
                 <li><%=link_to '첫 화면'%></li>
                 <li><%=link_to '소 개'%></li>
                 <li><%=link_to '문 의'%></li>
+                <li><%=link_to '게시판'%></li>
             </ul>
         </div>
-    </nav>
+    </div>
+    -->
     <section>
         <div class="section-inner">
             <div class="section-inner-2">
-                <p>안녕하세요 반갑습니다.주저리주저리계속......</p>
+                <p></p>
             </div>
         </div>
     </section>
@@ -26,10 +40,14 @@
 </div>
 <script>
     $(window).scroll(function() {
-    if($(this).scrollTop() < 10)
-        $('nav').css('opacity','1');
+    if($(this).scrollTop() < 70)
+        $('.nav-1').css('background-color', 'transparent'),
+        $('.nav-1 h1').css('color', 'black'),
+        $('.nav-inner a').css('color', '#0489B1');
     else
-        $('nav').css('opacity','.8');
+        $('.nav-1').css('background-color', '#585858'),
+        $('.nav-1 h1').css('color', 'white'),
+        $('.nav-inner a').css('color', 'white');
 });
 </script>
 
