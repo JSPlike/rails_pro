@@ -1,0 +1,35 @@
+<div id="container">    
+    <nav>
+        <div class="nav-inner">
+            <h1>Handling Code</h1>
+        </div>
+        <div class="nav-inner-2">
+            <ul>
+                <li><%=link_to '첫 화면'%></li>
+                <li><%=link_to '소 개'%></li>
+                <li><%=link_to '문 의'%></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="section-inner">
+            <div class="section-inner-2">
+                <p>안녕하세요 반갑습니다.주저리주저리계속......</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-inner">
+            <p>Copyright : HandlingCode!!</p>
+        </div>
+    </footer>
+</div>
+<script>
+    $(window).scroll(function() {
+    if($(this).scrollTop() < 10)
+        $('nav').css('opacity','1');
+    else
+        $('nav').css('opacity','.8');
+});
+</script>
+
